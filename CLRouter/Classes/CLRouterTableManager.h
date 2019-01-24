@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "CLRouterTableTargetModel.h"
+#import "CLRouterTargetConfig.h"
 #import "CLRouterTableAccessProtocol.h"
 
 @interface CLRouterTableManager : NSObject <CLRouterTableAccessProtocol>
@@ -21,6 +21,6 @@
  @param host 路径名称
  @return 目标对象
  */
-- (CLRouterTableTargetModel *)getRouterTableTargetWithScheme:(NSString *)scheme host:(NSString *)host;
+- (CLRouterTargetConfig *)getRouterTableTargetWithScheme:(NSString *)scheme host:(NSString *)host;
 
 @end

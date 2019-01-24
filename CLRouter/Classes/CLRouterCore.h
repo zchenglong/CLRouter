@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "CLRouterTableTargetModel.h"
+#import "CLRouterTargetConfig.h"
 #import "CLRouterRequest.h"
 
 @interface CLRouterCore : NSObject
@@ -21,6 +21,6 @@
  @param viewController 源viewController，默认为nil，若为nil，使用当前viewController作为源
  @param block 结果回调
  */
-+ (void)gotoViewControllerWithTarget:(CLRouterTableTargetModel *)target parameters:(NSDictionary *)parameters viewController:(UIViewController *)viewController callback:(void (^)(BOOL success))block;
++ (void)gotoViewControllerWithTarget:(CLRouterTargetConfig *)target parameters:(NSDictionary *)parameters viewController:(UIViewController *)viewController callback:(void (^)(BOOL success))block;
 
 @end

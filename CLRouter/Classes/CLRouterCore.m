@@ -16,7 +16,7 @@
 
 @implementation CLRouterCore
 
-+ (void)gotoViewControllerWithTarget:(CLRouterTableTargetModel *)target parameters:(NSDictionary *)parameters viewController:(UIViewController *)viewController callback:(void (^)(BOOL success))block {
++ (void)gotoViewControllerWithTarget:(CLRouterTargetConfig *)target parameters:(NSDictionary *)parameters viewController:(UIViewController *)viewController callback:(void (^)(BOOL success))block {
     
 }
 

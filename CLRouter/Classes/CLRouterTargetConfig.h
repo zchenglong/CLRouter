@@ -1,5 +1,5 @@
 //
-//  CLRouterTableTargetModel.h
+//  CLRouterTargetConfig.h
 //  CLRouter
 //
 //  Created by zcl on 2019/1/11.
@@ -10,7 +10,8 @@
 
 typedef NS_ENUM(NSInteger, CLRouterShowType) {
     CLRouterShowType_Push,
-    CLRouterShowType_Present
+    CLRouterShowType_Present,
+    CLRouterShowType_Custom
 };
 
 typedef NS_ENUM(NSInteger, CLRouterVCType) {
@@ -19,7 +20,7 @@ typedef NS_ENUM(NSInteger, CLRouterVCType) {
     CLRouterVCType_Storyboard
 };
 
-@interface CLRouterTableTargetModel : NSObject
+@interface CLRouterTargetConfig : NSObject
 
 // Target ViewController Show Type (Push/Present), default is Push
 @property(nonatomic, assign) CLRouterShowType *showType;

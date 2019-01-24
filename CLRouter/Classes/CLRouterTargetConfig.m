@@ -1,13 +1,13 @@
 //
-//  CLRouterTableTargetModel.m
+//  CLRouterTargetConfig.m
 //  CLRouter
 //
 //  Created by zcl on 2019/1/11.
 //  Copyright © 2019年 zcl. All rights reserved.
 //
 
-#import "CLRouterTableTargetModel.h"
+#import "CLRouterTargetConfig.h"
 
-@implementation CLRouterTableTargetModel
+@implementation CLRouterTargetConfig
 
 @end

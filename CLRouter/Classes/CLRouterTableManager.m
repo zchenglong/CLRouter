@@ -45,22 +45,36 @@
     if (!parameters) {
         return NO;
     }
-    [self registerRouterTableWithScheme:scheme parameters:parameters];
+//    [self registerRouterTableWithScheme:scheme parameters:parameters];
+    [self registerRouterTableWithScheme:scheme targetConfig:[self targetConfigWithParameters:parameters]];
     return YES;
 }
 
-- (BOOL)registerRouterTableWithScheme:(NSString *)scheme parameters:(NSDictionary *)parameters {
+- (BOOL)registerRouterTableWithScheme:(NSString *)scheme targetConfig:(CLRouterTargetConfig *)targetConfig {
+    if (!scheme || scheme.length == 0) {
+        return NO;
+    }
+    if (!targetConfig || ![targetConfig isKindOfClass:[CLRouterTargetConfig class]]) {
+        return NO;
+    }
+    [self.routerTables setObject:targetConfig forKey:scheme];
+    return YES;
+}
+
+- (BOOL)registerRouterTableWithScheme:(NSString *)scheme parameters:(NSDictionary<NSString *, CLRouterTargetConfig *> *)parameters {
     if (!scheme || scheme.length == 0) {
         return NO;
     }
     if (!parameters || ![parameters isKindOfClass:[NSDictionary class]]) {
         return NO;
     }
-    [self.routerTables setObject:parameters forKey:scheme];
+    NSMutableDictionary *dictionary = [NSMutableDictionary dictionary];
+    [dictionary setObject:parameters forKey:@"targets"];
+    [self.routerTables setObject:dictionary forKey:scheme];
     return YES;
 }
 
-- (CLRouterTableTargetModel *)getRouterTableTargetWithScheme:(NSString *)scheme host:(NSString *)host {
+- (CLRouterTargetConfig *)getRouterTableTargetWithScheme:(NSString *)scheme host:(NSString *)host {
     if (!scheme || scheme.length == 0) {
         return nil;
     }
@@ -72,19 +86,30 @@
     if (!routerTable) {
         return nil;
     }
-    //获取路由表项
-    id target = routerTable[host];
+    //获取路由表目标项的集合
+    NSDictionary *targets = routerTable[@"targets"];
+    if (!targets) {
+        return nil;
+    }
+    //获取路由表目标项
+    id target = targets[host];
     if (!target) {
         return nil;
     }
-    if ([target isKindOfClass:[CLRouterTableTargetModel class]]) {
+    
+    if ([target isKindOfClass:[CLRouterTargetConfig class]]) {
         return target;
     } else if ([target isKindOfClass:[NSDictionary class]]) {
-        CLRouterTableTargetModel *targetModel = [[CLRouterTableTargetModel alloc]init];
+        CLRouterTargetConfig *targetConfig = [[CLRouterTargetConfig alloc]init];
         //TODO:handle targetModel
-        return targetModel;
+        return targetConfig;
     }
     return nil;
+}
+
+- (CLRouterTargetConfig *)targetConfigWithParameters:(NSDictionary *)parameters {
+    CLRouterTargetConfig *targetConfig = [[CLRouterTargetConfig alloc]init];
+    return targetConfig;
 }
 
 @end

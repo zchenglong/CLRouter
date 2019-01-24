@@ -8,7 +8,7 @@
 
 #import "CLViewController.h"
 
-@interface CLViewController ()
+@interface CLViewController () <UITableViewDelegate,UITableViewDataSource>
 
 @end
 

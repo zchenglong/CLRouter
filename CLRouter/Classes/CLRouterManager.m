@@ -47,7 +47,7 @@
     }
     //解析URL
     [realURL router_parseURLWithCallback:^(NSString *scheme, NSString *host, NSDictionary *params) {
-        CLRouterTableTargetModel *targetModel = [[CLRouterTableManager sharedManager] getRouterTableTargetWithScheme:scheme host:host];
+        CLRouterTargetConfig *targetModel = [[CLRouterTableManager sharedManager] getRouterTableTargetWithScheme:scheme host:host];
         if (!targetModel) {
             //external handler
             [self handleExternalRouterWithURL:realURL callback:block];
@@ -77,7 +77,7 @@
     }];
 }
 
-- (void)handleRouterWithTarget:(CLRouterTableTargetModel *)target parameters:(NSDictionary *)parameters routerRequest:(CLRouterRequest *)routerRequest url:(NSURL *)url callback:(void (^)(NSURL *URL, BOOL success))block {
+- (void)handleRouterWithTarget:(CLRouterTargetConfig *)target parameters:(NSDictionary *)parameters routerRequest:(CLRouterRequest *)routerRequest url:(NSURL *)url callback:(void (^)(NSURL *URL, BOOL success))block {
     NSMutableDictionary *dicParams = [NSMutableDictionary dictionary];
     if (parameters) {
         [dicParams setDictionary:parameters];
