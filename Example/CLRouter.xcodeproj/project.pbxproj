@@ -320,10 +320,12 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-CLRouter_Example/Pods-CLRouter_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/CLRouter/CLRouter.framework",
+				"${BUILT_PRODUCTS_DIR}/YYKit/YYKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CLRouter.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

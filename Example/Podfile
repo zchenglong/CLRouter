@@ -4,6 +4,8 @@ platform :ios, '8.0'
 
 target 'CLRouter_Example' do
   pod 'CLRouter', :path => '../'
+#  pod 'MJExtension'
+  pod 'YYKit'
 
   target 'CLRouter_Tests' do
     inherit! :search_paths

@@ -16,9 +16,9 @@
  请求路由跳转
  
  @param routerRequest 请求体，包含请求URL
- @param block 结果回调
+ @param callback 结果回调
  */
-- (void)openURLWithRouterRequest:(CLRouterRequest *)routerRequest callback:(void (^)(NSURL *URL, BOOL success))block;
+- (void)openURLWithRouterRequest:(CLRouterRequest *)routerRequest callback:(void (^)(NSURL *URL, BOOL success))callback;
 
 @end
 

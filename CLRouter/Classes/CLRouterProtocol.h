@@ -39,23 +39,22 @@
  @param parameters 路由参数
  @return 是否可以处理路由
  */
-+ (BOOL)canHandleRouterWithParameters:(NSDictionary *)parameters;
+- (BOOL)canHandleRouterWithParameters:(NSDictionary *)parameters;
 
 /**
  处理路由，可以对目标项做参数赋值（如果未实现该协议，默认使用KVC赋值）
  
- @param target 目标控制器对象
  @param parameters 路由参数
  */
-+ (void)handleRouterWithTarget:(id)target parameters:(NSDictionary *)parameters;
+- (void)handleRouterWithParameters:(NSDictionary *)parameters;
 
 /**
  支持自定义控制器跳转（如果定义为CustomType，而未实现该协议，默认Push的方式跳转）
  实现该协议可以自定义跳转方式
  @param sourceVC 源控制器
- @param destVC 目标控制器
+ @param targetVC 目标控制器
  */
-+ (void)handleCustomShowWithSourceVC:(UIViewController *)sourceVC destVC:(UIViewController *)destVC;
+- (void)handleCustomShowWithSourceVC:(UIViewController *)sourceVC targetVC:(UIViewController *)targetVC;
 
 
 @end

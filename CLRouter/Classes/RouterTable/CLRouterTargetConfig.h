@@ -23,10 +23,10 @@ typedef NS_ENUM(NSInteger, CLRouterVCType) {
 @interface CLRouterTargetConfig : NSObject
 
 // Target ViewController Show Type (Push/Present), default is Push
-@property(nonatomic, assign) CLRouterShowType *showType;
+@property(nonatomic, assign) CLRouterShowType showType;
 
 // Target ViewController‘s Create Type (Class/Xib/Storyboard), default is Class
-@property(nonatomic, assign) CLRouterVCType *vcType;
+@property(nonatomic, assign) CLRouterVCType vcType;
 
 // Target ViewController's class name (use to class)
 @property(nonatomic, copy) NSString *className;
@@ -37,7 +37,7 @@ typedef NS_ENUM(NSInteger, CLRouterVCType) {
 // Target ViewController's xib of storyboard identifier
 @property(nonatomic, copy) NSString *identifier;
 
-// Target ViewController's resourse like xib or storyboard bundleName
-@property(nonatomic, copy) NSString *bundleName;
+// Target ViewController's resourse like xib or storyboard bundle
+@property(nonatomic, copy) NSBundle *bundle;
 
 @end
