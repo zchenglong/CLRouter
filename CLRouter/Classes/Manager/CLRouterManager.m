@@ -80,7 +80,6 @@
         return routerRequest.url;
     }
     if (routerRequest.strUrl) {
-        NSString *url = URLEncode
         return [NSURL URLWithString:routerRequest.strUrl];
     }
     return nil;
@@ -100,7 +99,11 @@
         [dicParams setDictionary:parameters];
     }
     if (routerRequest.parameters) {
-        [dicParams setDictionary:routerRequest.parameters];
+        [routerRequest.parameters enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
+            if ([key isKindOfClass:[NSString class]]) {
+                [dicParams setObject:obj forKey:key];
+            }
+        }];
     }
     [CLRouterCore gotoViewControllerWithTargetConfig:target parameters:dicParams sourceVC:routerRequest.sourceVC callback:^(BOOL success) {
         if (callback) {

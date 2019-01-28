@@ -45,4 +45,13 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options {
+    CLRouterRequest *routerRequest = [[CLRouterRequest alloc]init];
+    routerRequest.url = url;
+    [[CLRouterManager sharedManager] openURLWithRouterRequest:routerRequest callback:^(NSURL *URL, BOOL success) {
+        NSLog(@"%s | %d | %@",__func__, success, URL);
+    }];
+    return YES;
+}
+
 @end

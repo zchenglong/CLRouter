@@ -45,9 +45,14 @@
     if (!_datas) {
         _datas = [NSMutableArray array];
         [_datas addObjectsFromArray:@[
-                                      [[CLTableItem alloc]initWithTitle:@"动态Class" router:@"SmartTourism://CLDynamicClassVC?code=10003&content=您好！"],
+                                      [[CLTableItem alloc]initWithTitle:@"动态Class" router:@"SmartTourism://CLDynamicClassVC?code=10003&content=ThisisDynamicRegister"],
                                       [[CLTableItem alloc]initWithTitle:@"动态Xib" router:@"SmartTourism://CLDynamicXibVC?code=10003&content=ThisisDynamicRegister"],
                                       [[CLTableItem alloc]initWithTitle:@"动态Storyboard" router:@"SmartTourism://CLDynamicStoryboardVC?code=10003&content=ThisisDynamicRegister"],
+                                      [[CLTableItem alloc]initWithTitle:@"静态Class" router:@"SmartTourism://CLStaticClassVC?code=10003&content=ThisisStaticRegister"],
+                                      [[CLTableItem alloc]initWithTitle:@"静态Xib" router:@"SmartTourism://CLStaticXibVC?code=10003&content=ThisisStaticRegister"],
+                                      [[CLTableItem alloc]initWithTitle:@"静态Storyboard" router:@"SmartTourism://CLStaticStoryboardVC?code=10003&content=ThisisStaticRegister"],
+                                      [[CLTableItem alloc]initWithTitle:@"外部链接baidu" router:@"https://baidu.com"],
+                                      [[CLTableItem alloc]initWithTitle:@"外部链接weixin" router:@"weixin://"],
                                       ]];
     }
     return _datas;
@@ -85,12 +90,18 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     CLTableItem *item = self.datas[indexPath.row];
-    CLRouterRequest *routerRequest = [[CLRouterRequest alloc]init];
-    routerRequest.strUrl = item.router;
-//    routerRequest.viewController = self;
-    [[CLRouterManager sharedManager] openURLWithRouterRequest:routerRequest callback:^(NSURL *URL, BOOL success) {
-        NSLog(@"%s | %d | %@",__func__, success, URL);
-    }];
+    
+    //方式一：使用CLRouterManager的open接口
+//    CLRouterRequest *routerRequest = [[CLRouterRequest alloc]init];
+//    routerRequest.url = [NSURL URLWithString:item.router];
+////    routerRequest.viewController = self;
+////    routerRequest.parameters = @{@"code":@9080};
+//    [[CLRouterManager sharedManager] openURLWithRouterRequest:routerRequest callback:^(NSURL *URL, BOOL success) {
+//        NSLog(@"%s | %d | %@",__func__, success, URL);
+//    }];
+//
+    //方式二：利用系统的OpenURL，支持外部App打开对应页面(需要配置URLType)。
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:item.router]];
 }
 
 @end

@@ -10,28 +10,25 @@
 
 @interface CLStaticClassVC ()
 
+@property(strong, nonatomic) UILabel *labContent;
+
+@property(assign, nonatomic) NSInteger code;
+
+@property(copy, nonatomic) NSString *content;
+
 @end
 
 @implementation CLStaticClassVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    CGFloat width = self.view.frame.size.width;
+    CGFloat height = self.view.frame.size.height;
+    self.labContent = [[UILabel alloc]initWithFrame:CGRectMake(0, height/4.0, width, height/2.0)];
+    [self.labContent setText:[NSString stringWithFormat:@"content : %@\ncode : %d", self.content, (int)self.code]];
+    [self.labContent setNumberOfLines:0];
+    [self.view addSubview:self.labContent];
 }
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
