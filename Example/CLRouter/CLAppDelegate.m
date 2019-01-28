@@ -7,12 +7,14 @@
 //
 
 #import "CLAppDelegate.h"
+#import "CLRouterManager.h"
 
 @implementation CLAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    [CLRouterManager sharedManager];
     return YES;
 }
 

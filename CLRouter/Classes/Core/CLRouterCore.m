@@ -11,6 +11,7 @@
 #import <objc/runtime.h>
 #import "CLRouterProtocol.h"
 #import "CLRouterTargetVCFactory.h"
+#import "UIViewController+CLRouter.h"
 
 @interface CLRouterCore ()
 
@@ -79,8 +80,7 @@
 }
 
 + (UIViewController *)findCurrentViewController {
-    // TODO:
-    return nil;
+    return [UIViewController currentViewController];
 }
 
 + (BOOL)handleShowWithSourceVC:(UIViewController *)sourceVC targetVC:(UIViewController *)targetVC showType:(CLRouterShowType)showType {

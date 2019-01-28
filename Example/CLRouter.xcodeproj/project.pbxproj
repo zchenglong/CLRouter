@@ -22,6 +22,13 @@
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
+		757E8B7621FE91B200F3A666 /* CLDynamicBaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 757E8B7521FE91B200F3A666 /* CLDynamicBaseVC.m */; };
+		757E8B7921FE927200F3A666 /* CLDynamicClassVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 757E8B7821FE927200F3A666 /* CLDynamicClassVC.m */; };
+		757E8B7C21FE936500F3A666 /* CLStaticClassVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 757E8B7B21FE936500F3A666 /* CLStaticClassVC.m */; };
+		757E8B8421FEB0DA00F3A666 /* CLDynamicXibVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 757E8B8221FEB0DA00F3A666 /* CLDynamicXibVC.m */; };
+		757E8B8521FEB0DA00F3A666 /* CLDynamicXibVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 757E8B8321FEB0DA00F3A666 /* CLDynamicXibVC.xib */; };
+		757E8B8821FEB0F600F3A666 /* CLDynamicStoryboardVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 757E8B8721FEB0F600F3A666 /* CLDynamicStoryboardVC.m */; };
+		757E8B8A21FEB3D000F3A666 /* DynamicVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 757E8B8921FEB3D000F3A666 /* DynamicVC.storyboard */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
 		9E1779C07B349C028B254B9E /* Pods_CLRouter_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E0DA3963523F9167C435D32 /* Pods_CLRouter_Example.framework */; };
 /* End PBXBuildFile section */
@@ -59,14 +66,26 @@
 		6003F5B9195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
-		641A1B26BEAF99C36E05AF7E /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		641A1B26BEAF99C36E05AF7E /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		65EC84809C3658C4EC5D48DF /* Pods-CLRouter_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CLRouter_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CLRouter_Tests/Pods-CLRouter_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		757E8B7421FE91B200F3A666 /* CLDynamicBaseVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLDynamicBaseVC.h; sourceTree = "<group>"; };
+		757E8B7521FE91B200F3A666 /* CLDynamicBaseVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLDynamicBaseVC.m; sourceTree = "<group>"; };
+		757E8B7721FE927200F3A666 /* CLDynamicClassVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLDynamicClassVC.h; sourceTree = "<group>"; };
+		757E8B7821FE927200F3A666 /* CLDynamicClassVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLDynamicClassVC.m; sourceTree = "<group>"; };
+		757E8B7A21FE936500F3A666 /* CLStaticClassVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLStaticClassVC.h; sourceTree = "<group>"; };
+		757E8B7B21FE936500F3A666 /* CLStaticClassVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLStaticClassVC.m; sourceTree = "<group>"; };
+		757E8B8121FEB0DA00F3A666 /* CLDynamicXibVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLDynamicXibVC.h; sourceTree = "<group>"; };
+		757E8B8221FEB0DA00F3A666 /* CLDynamicXibVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLDynamicXibVC.m; sourceTree = "<group>"; };
+		757E8B8321FEB0DA00F3A666 /* CLDynamicXibVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CLDynamicXibVC.xib; sourceTree = "<group>"; };
+		757E8B8621FEB0F600F3A666 /* CLDynamicStoryboardVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLDynamicStoryboardVC.h; sourceTree = "<group>"; };
+		757E8B8721FEB0F600F3A666 /* CLDynamicStoryboardVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLDynamicStoryboardVC.m; sourceTree = "<group>"; };
+		757E8B8921FEB3D000F3A666 /* DynamicVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DynamicVC.storyboard; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9E0DA3963523F9167C435D32 /* Pods_CLRouter_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CLRouter_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C569191E12F08F7982D0A382 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		C569191E12F08F7982D0A382 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		EAE904710FA24BEBCC8493BF /* Pods-CLRouter_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CLRouter_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CLRouter_Example/Pods-CLRouter_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		FFAD044CE5CF81A8B35B84C3 /* CLRouter.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = CLRouter.podspec; path = ../CLRouter.podspec; sourceTree = "<group>"; };
+		FFAD044CE5CF81A8B35B84C3 /* CLRouter.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = CLRouter.podspec; path = ../CLRouter.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +162,8 @@
 		6003F593195388D20070C39A /* Example for CLRouter */ = {
 			isa = PBXGroup;
 			children = (
+				757E8B7221FE917D00F3A666 /* Static */,
+				757E8B7121FE917100F3A666 /* Dynamic */,
 				6003F59C195388D20070C39A /* CLAppDelegate.h */,
 				6003F59D195388D20070C39A /* CLAppDelegate.m */,
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
@@ -194,6 +215,32 @@
 				641A1B26BEAF99C36E05AF7E /* LICENSE */,
 			);
 			name = "Podspec Metadata";
+			sourceTree = "<group>";
+		};
+		757E8B7121FE917100F3A666 /* Dynamic */ = {
+			isa = PBXGroup;
+			children = (
+				757E8B7421FE91B200F3A666 /* CLDynamicBaseVC.h */,
+				757E8B7521FE91B200F3A666 /* CLDynamicBaseVC.m */,
+				757E8B7721FE927200F3A666 /* CLDynamicClassVC.h */,
+				757E8B7821FE927200F3A666 /* CLDynamicClassVC.m */,
+				757E8B8121FEB0DA00F3A666 /* CLDynamicXibVC.h */,
+				757E8B8221FEB0DA00F3A666 /* CLDynamicXibVC.m */,
+				757E8B8321FEB0DA00F3A666 /* CLDynamicXibVC.xib */,
+				757E8B8621FEB0F600F3A666 /* CLDynamicStoryboardVC.h */,
+				757E8B8721FEB0F600F3A666 /* CLDynamicStoryboardVC.m */,
+				757E8B8921FEB3D000F3A666 /* DynamicVC.storyboard */,
+			);
+			name = Dynamic;
+			sourceTree = "<group>";
+		};
+		757E8B7221FE917D00F3A666 /* Static */ = {
+			isa = PBXGroup;
+			children = (
+				757E8B7A21FE936500F3A666 /* CLStaticClassVC.h */,
+				757E8B7B21FE936500F3A666 /* CLStaticClassVC.m */,
+			);
+			name = Static;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -277,6 +324,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */,
+				757E8B8A21FEB3D000F3A666 /* DynamicVC.storyboard in Resources */,
+				757E8B8521FEB0DA00F3A666 /* CLDynamicXibVC.xib in Resources */,
 				71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
@@ -357,6 +406,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				757E8B8821FEB0F600F3A666 /* CLDynamicStoryboardVC.m in Sources */,
+				757E8B7C21FE936500F3A666 /* CLStaticClassVC.m in Sources */,
+				757E8B8421FEB0DA00F3A666 /* CLDynamicXibVC.m in Sources */,
+				757E8B7921FE927200F3A666 /* CLDynamicClassVC.m in Sources */,
+				757E8B7621FE91B200F3A666 /* CLDynamicBaseVC.m in Sources */,
 				6003F59E195388D20070C39A /* CLAppDelegate.m in Sources */,
 				6003F5A7195388D20070C39A /* CLViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Dynamic StoryboardVC-->
+        <scene sceneID="fac-5G-F4K">
+            <objects>
+                <viewController storyboardIdentifier="identifier_dynamic_vc" id="KWF-y5-DDi" customClass="CLDynamicStoryboardVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="MhW-qj-AE8"/>
+                        <viewControllerLayoutGuide type="bottom" id="Iju-nV-DbJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tlq-vy-bRU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qzK-3o-ohe">
+                                <rect key="frame" x="166.5" y="323.5" width="42" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="qzK-3o-ohe" firstAttribute="centerX" secondItem="tlq-vy-bRU" secondAttribute="centerX" id="bNF-Vv-D57"/>
+                            <constraint firstItem="qzK-3o-ohe" firstAttribute="centerY" secondItem="tlq-vy-bRU" secondAttribute="centerY" id="uXz-N5-lah"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ePK-NP-1Qb"/>
+                    </view>
+                    <connections>
+                        <outlet property="labContent" destination="qzK-3o-ohe" id="X60-jj-nrZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ig2-c6-l3r" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="25" y="1569"/>
+        </scene>
+    </scenes>
+</document>

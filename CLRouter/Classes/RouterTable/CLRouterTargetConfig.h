@@ -28,7 +28,7 @@ typedef NS_ENUM(NSInteger, CLRouterVCType) {
 // Target ViewController‘s Create Type (Class/Xib/Storyboard), default is Class
 @property(nonatomic, assign) CLRouterVCType vcType;
 
-// Target ViewController's class name (use to class)
+// Target ViewController's class name (use to class or xib)
 @property(nonatomic, copy) NSString *className;
 
 // Target ViewController's xib or storyboard filename (use to xib or storyboard)

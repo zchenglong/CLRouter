@@ -80,6 +80,7 @@
         return routerRequest.url;
     }
     if (routerRequest.strUrl) {
+        NSString *url = URLEncode
         return [NSURL URLWithString:routerRequest.strUrl];
     }
     return nil;
@@ -101,7 +102,7 @@
     if (routerRequest.parameters) {
         [dicParams setDictionary:routerRequest.parameters];
     }
-    [CLRouterCore gotoViewControllerWithTargetConfig:target parameters:parameters sourceVC:routerRequest.viewController callback:^(BOOL success) {
+    [CLRouterCore gotoViewControllerWithTargetConfig:target parameters:dicParams sourceVC:routerRequest.sourceVC callback:^(BOOL success) {
         if (callback) {
             callback(url, success);
         }

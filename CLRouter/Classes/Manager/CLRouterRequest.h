@@ -21,6 +21,6 @@
 @property(nonatomic, copy) NSDictionary *parameters;
 
 // the Source View Controller to jump . default is nil. if nil, this will find current View Controller to jump.
-@property(nonatomic, strong) UIViewController *viewController;
+@property(nonatomic, strong) UIViewController *sourceVC;
 
 @end
