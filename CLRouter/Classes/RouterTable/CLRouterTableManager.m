@@ -7,7 +7,7 @@
 //
 
 #import "CLRouterTableManager.h"
-#import "CLRouterTableHelper.h"
+#import "CLRouterRuntimeHelper.h"
 #import "CLRouterProtocol.h"
 #import "CLRouterFileHelper.h"
 #import "YYKit.h"
@@ -128,8 +128,8 @@
     return YES;
 }
 
-- (BOOL)registerRouterTableFromClassWhichConfirmToProtocol {
-    NSArray *classes = [CLRouterTableHelper getClassesWhichConfirmToProtocol:@protocol(CLRouterProtocol)];
+- (BOOL)registerRouterTableDynamic {
+    NSArray *classes = [CLRouterRuntimeHelper getClassesWhichConfirmToProtocol:@protocol(CLRouterProtocol)];
     for (Class<CLRouterProtocol> class in classes) {
         NSString *scheme = nil;
         NSString *host = nil;

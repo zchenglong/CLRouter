@@ -14,6 +14,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    //动态注册路由表
+    [[CLRouterManager sharedManager] registerRouterTableDynamic];
     //静态注册路由表
     [[CLRouterManager sharedManager] registerRouterTableWithFilePath:@"router_table_smart_tourism.json" bundle:nil];
     //或者使用plist

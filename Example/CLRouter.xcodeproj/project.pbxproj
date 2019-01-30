@@ -239,16 +239,16 @@
 		7582C7A42201A92A008E334B /* Static */ = {
 			isa = PBXGroup;
 			children = (
+				7582C7AB2201A92A008E334B /* CLStaticBaseVC.h */,
+				7582C7A72201A92A008E334B /* CLStaticBaseVC.m */,
+				7582C7A92201A92A008E334B /* CLStaticClassVC.h */,
+				7582C7AE2201A92A008E334B /* CLStaticClassVC.m */,
+				7582C7AC2201A92A008E334B /* CLStaticXibVC.h */,
+				7582C7A82201A92A008E334B /* CLStaticXibVC.m */,
 				7582C7A52201A92A008E334B /* CLStaticXibVC.xib */,
 				7582C7A62201A92A008E334B /* CLStaticStoryboardVC.h */,
-				7582C7A72201A92A008E334B /* CLStaticBaseVC.m */,
-				7582C7A82201A92A008E334B /* CLStaticXibVC.m */,
-				7582C7A92201A92A008E334B /* CLStaticClassVC.h */,
 				7582C7AA2201A92A008E334B /* CLStaticStoryboardVC.m */,
-				7582C7AB2201A92A008E334B /* CLStaticBaseVC.h */,
-				7582C7AC2201A92A008E334B /* CLStaticXibVC.h */,
 				7582C7AD2201A92A008E334B /* StaticVC.storyboard */,
-				7582C7AE2201A92A008E334B /* CLStaticClassVC.m */,
 			);
 			path = Static;
 			sourceTree = "<group>";
@@ -256,16 +256,16 @@
 		7582C7AF2201A92A008E334B /* Dynamic */ = {
 			isa = PBXGroup;
 			children = (
+				7582C7B92201A92A008E334B /* CLDynamicBaseVC.h */,
+				7582C7B32201A92A008E334B /* CLDynamicBaseVC.m */,
+				7582C7B62201A92A008E334B /* CLDynamicClassVC.h */,
 				7582C7B02201A92A008E334B /* CLDynamicClassVC.m */,
 				7582C7B12201A92A008E334B /* CLDynamicXibVC.h */,
-				7582C7B22201A92A008E334B /* CLDynamicStoryboardVC.m */,
-				7582C7B32201A92A008E334B /* CLDynamicBaseVC.m */,
-				7582C7B42201A92A008E334B /* DynamicVC.storyboard */,
 				7582C7B52201A92A008E334B /* CLDynamicXibVC.m */,
-				7582C7B62201A92A008E334B /* CLDynamicClassVC.h */,
-				7582C7B72201A92A008E334B /* CLDynamicStoryboardVC.h */,
 				7582C7B82201A92A008E334B /* CLDynamicXibVC.xib */,
-				7582C7B92201A92A008E334B /* CLDynamicBaseVC.h */,
+				7582C7B72201A92A008E334B /* CLDynamicStoryboardVC.h */,
+				7582C7B22201A92A008E334B /* CLDynamicStoryboardVC.m */,
+				7582C7B42201A92A008E334B /* DynamicVC.storyboard */,
 			);
 			path = Dynamic;
 			sourceTree = "<group>";

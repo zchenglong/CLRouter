@@ -27,18 +27,11 @@
     return manager;
 }
 
-- (instancetype)init {
-    if (self = [super init]) {
-        [self registerRouterTableFromClassWhichConfirmToProtocol];
-    }
-    return self;
-}
-
-- (void)registerRouterTableFromClassWhichConfirmToProtocol {
-    [[CLRouterTableManager sharedManager] registerRouterTableFromClassWhichConfirmToProtocol];
-}
-
 #pragma mark - CLRouterTableAccessProtocol
+
+- (BOOL)registerRouterTableDynamic {
+    return [[CLRouterTableManager sharedManager] registerRouterTableDynamic];
+}
 
 - (BOOL)registerRouterTableWithFilePath:(NSString *)filePath bundle:(NSBundle *)bundle {
     return [[CLRouterTableManager sharedManager] registerRouterTableWithFilePath:filePath bundle:bundle];

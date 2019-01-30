@@ -15,11 +15,6 @@
 + (instancetype)sharedManager;
 
 /**
- 通过遍历实现Router协议的类来注册路由表
- */
-- (BOOL)registerRouterTableFromClassWhichConfirmToProtocol;
-
-/**
  添加路由表目标项配置
  
  @param scheme 路由协议名称，对应URL中的scheme

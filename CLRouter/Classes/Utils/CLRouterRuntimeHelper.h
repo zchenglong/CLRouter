@@ -9,6 +9,8 @@
 
 @interface CLRouterRuntimeHelper : NSObject
 
++ (NSArray *)getClassesWhichConfirmToProtocol:(Protocol *)protocol;
+
 + (NSArray<NSString *> *)getClassProperties:(Class)cls;
 
 @end

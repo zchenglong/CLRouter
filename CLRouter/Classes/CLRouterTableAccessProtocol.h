@@ -11,6 +11,14 @@
 
 @protocol CLRouterTableAccessProtocol <NSObject>
 
+
+/**
+ 动态注册路由表
+
+ @return 是否注册成功
+ */
+- (BOOL)registerRouterTableDynamic;
+
 /**
  注册路由表（文件）
  

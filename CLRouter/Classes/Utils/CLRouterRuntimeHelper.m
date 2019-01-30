@@ -10,6 +10,23 @@
 
 @implementation CLRouterRuntimeHelper
 
++ (NSArray *)getClassesWhichConfirmToProtocol:(Protocol *)protocol {
+    NSMutableArray *classes = [NSMutableArray array];
+    unsigned int classCount;
+    Class* classList = objc_copyClassList(&classCount);
+    
+    int i;
+    for (i=0; i<classCount; i++) {
+        const char *className = class_getName(classList[i]);
+        Class thisClass = objc_getClass(className);
+        if (class_conformsToProtocol(thisClass, protocol)) {
+            [classes addObject:thisClass];
+        }
+    }
+    free(classList);
+    return classes;
+}
+
 + (NSArray<NSString *> *)getClassProperties:(Class)cls {
     
     // 获取当前类的所有属性
