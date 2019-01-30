@@ -26,8 +26,9 @@
     NSLog(@"%s", __func__);
     CLRouterTargetConfig *config = [[CLRouterTargetConfig alloc]init];
     config.vcType = CLRouterVCType_Storyboard;
+    config.className = NSStringFromClass([self class]);
     config.fileName = @"DynamicVC";
-    config.bundle = nil;
+    config.bundlePath = nil;
     config.identifier = @"identifier_dynamic_vc";
     config.showType = CLRouterShowType_Push;
     return config;

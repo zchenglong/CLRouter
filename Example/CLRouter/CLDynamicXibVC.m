@@ -28,7 +28,7 @@
     config.vcType = CLRouterVCType_Xib;
     config.className = NSStringFromClass([self class]);
     config.fileName = @"CLDynamicXibVC";
-    config.bundle = nil;
+    config.bundlePath = nil;
     config.showType = CLRouterShowType_Push;
     return config;
 }

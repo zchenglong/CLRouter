@@ -38,6 +38,7 @@ typedef NS_ENUM(NSInteger, CLRouterVCType) {
 @property(nonatomic, copy) NSString *identifier;
 
 // Target ViewController's resourse like xib or storyboard bundle
-@property(nonatomic, copy) NSBundle *bundle;
+//@property(nonatomic, copy) NSBundle *bundle;
+@property(nonatomic, copy) NSString *bundlePath;
 
 @end

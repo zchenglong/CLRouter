@@ -24,6 +24,7 @@
     [super viewDidLoad];
     
     [self.labContent setText:[NSString stringWithFormat:@"content : %@\ncode : %d", self.content, (int)self.code]];
+    
 }
 
 
