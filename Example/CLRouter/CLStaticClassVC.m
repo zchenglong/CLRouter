@@ -16,6 +16,8 @@
 
 @property(copy, nonatomic) NSString *content;
 
+@property(strong, nonatomic) NSNumber *num;
+
 @end
 
 @implementation CLStaticClassVC
@@ -26,7 +28,7 @@
     CGFloat width = self.view.frame.size.width;
     CGFloat height = self.view.frame.size.height;
     self.labContent = [[UILabel alloc]initWithFrame:CGRectMake(0, height/4.0, width, height/2.0)];
-    [self.labContent setText:[NSString stringWithFormat:@"content : %@\ncode : %d", self.content, (int)self.code]];
+    [self.labContent setText:[NSString stringWithFormat:@"content : %@\ncode : %d\nnum : %@", self.content, (int)self.code,self.num]];
     [self.labContent setNumberOfLines:0];
     [self.view addSubview:self.labContent];
 }

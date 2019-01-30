@@ -6,8 +6,8 @@
 //  Copyright © 2019年 zhangchenglong. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "CLStaticBaseVC.h"
 
-@interface CLStaticXibVC : UIViewController
+@interface CLStaticXibVC : CLStaticBaseVC
 
 @end

@@ -1,19 +1,19 @@
 {
 	"SmartTourism": { 
 		"CLStaticClassVC":{
-			"vcType":0, //Class /default
+			"vcType":0, 
 			"className":"CLStaticClassVC",
-			"showType":0, // Push or Present
+			"showType":0,
 		},
 		"CLStaticXibVC":{
-			"vcType":1, //Xib
+			"vcType":1,
 			"className":"CLStaticXibVC",
 			"fileName":"CLStaticXibVC",
 			"bundlePath":"",
 			"showType":0,
 		},
 		"CLStaticStoryboardVC":{
-			"vcType":2, //Storyboard
+			"vcType":2,
             "className":"CLStaticStoryboardVC",
 			"fileName":"StaticVC",
 			"identifier":"identifier_static_vc",

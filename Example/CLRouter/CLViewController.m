@@ -48,7 +48,7 @@
                                       [[CLTableItem alloc]initWithTitle:@"动态Class" router:@"SmartTourism://CLDynamicClassVC?code=10003&content=ThisisDynamicRegister"],
                                       [[CLTableItem alloc]initWithTitle:@"动态Xib" router:@"SmartTourism://CLDynamicXibVC?code=10003&content=ThisisDynamicRegister"],
                                       [[CLTableItem alloc]initWithTitle:@"动态Storyboard" router:@"SmartTourism://CLDynamicStoryboardVC?code=10003&content=ThisisDynamicRegister"],
-                                      [[CLTableItem alloc]initWithTitle:@"静态Class" router:@"SmartTourism://CLStaticClassVC?code=10003&content=ThisisStaticRegister"],
+                                      [[CLTableItem alloc]initWithTitle:@"静态Class" router:@"SmartTourism://CLStaticClassVC?code=10003&content=ThisisStaticRegister&num=9879"],
                                       [[CLTableItem alloc]initWithTitle:@"静态Xib" router:@"SmartTourism://CLStaticXibVC?code=10003&content=ThisisStaticRegister"],
                                       [[CLTableItem alloc]initWithTitle:@"静态Storyboard" router:@"SmartTourism://CLStaticStoryboardVC?code=10003&content=ThisisStaticRegister"],
                                       [[CLTableItem alloc]initWithTitle:@"外部链接baidu" router:@"https://baidu.com"],
@@ -99,7 +99,7 @@
 //    [[CLRouterManager sharedManager] openURLWithRouterRequest:routerRequest callback:^(NSURL *URL, BOOL success) {
 //        NSLog(@"%s | %d | %@",__func__, success, URL);
 //    }];
-//
+
     //方式二：利用系统的OpenURL，支持外部App打开对应页面(需要配置URLType)。
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:item.router]];
 }

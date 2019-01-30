@@ -38,4 +38,13 @@
  */
 - (CLRouterTargetConfig *)getRouterTableTargetWithScheme:(NSString *)scheme host:(NSString *)host;
 
+
+/**
+ scheme是否在路由表中
+
+ @param scheme 路由协议
+ @return 是否在路由表中
+ */
+- (BOOL)isSchemeExist:(NSString *)scheme;
+
 @end

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SmartTourism</key>
+	<dict>
+		<key>CLStaticClassVC</key>
+		<dict>
+			<key>vcType</key>
+			<string>0</string>
+			<key>className</key>
+			<string>CLStaticClassVC</string>
+			<key>showType</key>
+			<string>0</string>
+		</dict>
+		<key>CLStaticXibVC</key>
+		<dict>
+			<key>vcType</key>
+			<string>1</string>
+			<key>className</key>
+			<string>CLStaticXibVC</string>
+			<key>fileName</key>
+			<string>CLStaticXibVC</string>
+			<key>bundlePath</key>
+			<string></string>
+			<key>showType</key>
+			<string>0</string>
+		</dict>
+		<key>CLStaticStoryboardVC</key>
+		<dict>
+			<key>vcType</key>
+			<string>2</string>
+			<key>className</key>
+			<string>CLStaticStoryboardVC</string>
+			<key>fileName</key>
+			<string>StaticVC</string>
+			<key>identifier</key>
+			<string>identifier_static_vc</string>
+			<key>bundlePath</key>
+			<string></string>
+			<key>showType</key>
+			<string>0</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

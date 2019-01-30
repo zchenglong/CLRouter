@@ -7,9 +7,10 @@
 //
 
 #import "CLRouterTableManager.h"
-#import "YYKit.h"
 #import "CLRouterTableHelper.h"
 #import "CLRouterProtocol.h"
+#import "CLRouterFileHelper.h"
+#import "YYKit.h"
 
 
 @interface CLRouterTableManager ()
@@ -63,27 +64,35 @@
     return nil;
 }
 
+- (BOOL)isSchemeExist:(NSString *)scheme {
+    if (!scheme || scheme.length == 0) {
+        return NO;
+    }
+    if (self.routerTables[scheme]) {
+        return YES;
+    }
+    return NO;
+}
+
 #pragma mark - CLRouterTableAccessProtocol
 
-- (BOOL)registerRouterTableWithFilePath:(NSString *)filePath {
+- (BOOL)registerRouterTableWithFilePath:(NSString *)filePath bundle:(NSBundle *)bundle {
     if (!filePath || filePath.length == 0) {
         return NO;
     }
-    //TODO:   NSDictionary *parameters = //从文件获取数据
-    NSDictionary *parameters = @{
-                                    @"scheme-tour":@{
-                                         @"host1":@{
-                                            @"className":@"CLViewController"
-                                         },
-                                         @"host2":@{
-                                            @"className":@"CLViewController2"
-                                         },
-                                    }
-                                 };
+    
+    NSString *fileName = filePath;
+    NSString *extentionType = @"json"; //default
+    NSArray *filePathComponents = [filePath componentsSeparatedByString:@"."];
+    if (filePathComponents.count == 2) {
+        fileName = filePathComponents[0];
+        extentionType = filePathComponents[1];
+    }
+    
+    NSDictionary *parameters = [CLRouterFileHelper getDataWithFileName:fileName bundle:bundle type:extentionType]; //从文件获取数据
     if (!parameters) {
         return NO;
     }
-
     [parameters enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
         NSDictionary *routerTable = obj;
         NSString *scheme = key;
@@ -145,6 +154,21 @@
         }
     }
     return YES;
+}
+
+
+- (id)getDataWithFilePath:(NSString *)filePath bundle:(NSBundle *)bundle type:(NSString *)type {
+    if (!bundle) {
+        bundle = [NSBundle mainBundle];
+    }
+    NSString *path = [bundle pathForResource:filePath ofType:type];
+    if (!path) {
+        return nil;
+    }
+    NSData *data = [[NSData alloc]initWithContentsOfFile:path];
+    NSError *error;
+    NSDictionary *dicData = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&error];
+    return dicData;
 }
 
 @end

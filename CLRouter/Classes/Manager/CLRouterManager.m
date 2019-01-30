@@ -40,8 +40,8 @@
 
 #pragma mark - CLRouterTableAccessProtocol
 
-- (BOOL)registerRouterTableWithFilePath:(NSString *)filePath {
-    return [[CLRouterTableManager sharedManager] registerRouterTableWithFilePath:filePath];
+- (BOOL)registerRouterTableWithFilePath:(NSString *)filePath bundle:(NSBundle *)bundle {
+    return [[CLRouterTableManager sharedManager] registerRouterTableWithFilePath:filePath bundle:bundle];
 }
 
 - (BOOL)registerRouterTableWithScheme:(NSString *)scheme parameters:(NSDictionary<NSString *,CLRouterTargetConfig *> *)parameters {
@@ -64,8 +64,14 @@
         __strong typeof(self) strongSelf = weakSelf;
         CLRouterTargetConfig *targetModel = [[CLRouterTableManager sharedManager] getRouterTableTargetWithScheme:scheme host:host];
         if (!targetModel) {
-            //external handler
-            [strongSelf handleExternalRouterWithURL:realURL callback:callback];
+            if (![[CLRouterTableManager sharedManager] isSchemeExist:scheme]) {
+                //external handler
+                [strongSelf handleExternalRouterWithURL:realURL callback:callback];
+            } else {
+                if (callback) {
+                    callback(realURL, NO);
+                }
+            }
             return;
         }
         //router core handler

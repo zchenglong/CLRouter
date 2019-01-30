@@ -14,7 +14,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-    [CLRouterManager sharedManager];
+    [[CLRouterManager sharedManager] registerRouterTableWithFilePath:@"router_table_smart_tourism.json" bundle:nil];
     return YES;
 }
 

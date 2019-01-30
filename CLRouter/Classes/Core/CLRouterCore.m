@@ -12,6 +12,7 @@
 #import "CLRouterProtocol.h"
 #import "CLRouterTargetVCFactory.h"
 #import "UIViewController+CLRouter.h"
+#import "CLRouterRuntimeHelper.h"
 
 @interface CLRouterCore ()
 
@@ -75,7 +76,16 @@
 }
 
 + (BOOL)handleRouterStaticProtocolWithParameters:(NSDictionary *)parameters targetVC:(UIViewController *)targetVC {
-    // TODO:
+    if (!targetVC) {
+        return NO;
+    }
+    NSArray *properties = [CLRouterRuntimeHelper getClassProperties:[targetVC class]];
+    [parameters enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
+        if ([properties containsObject:key]) {
+            NSString *propertyName = [NSString stringWithFormat:@"_%@",key];
+            [targetVC setValue:obj forKey:propertyName];
+        }
+    }];
     return YES;
 }
 

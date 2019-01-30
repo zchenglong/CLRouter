@@ -34,6 +34,8 @@
 		757E8B9221FEECCC00F3A666 /* CLStaticStoryboardVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 757E8B9121FEECCC00F3A666 /* CLStaticStoryboardVC.m */; };
 		757E8B9421FEECDF00F3A666 /* StaticVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 757E8B9321FEECDF00F3A666 /* StaticVC.storyboard */; };
 		757E8B9621FFDAFF00F3A666 /* router_table_smart_tourism.json in Resources */ = {isa = PBXBuildFile; fileRef = 757E8B9521FFDAFF00F3A666 /* router_table_smart_tourism.json */; };
+		7582C79D220198CA008E334B /* CLStaticBaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7582C79C220198CA008E334B /* CLStaticBaseVC.m */; };
+		7582C79F22019AEB008E334B /* router_table_smart_tourism.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7582C79E22019AEB008E334B /* router_table_smart_tourism.plist */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
 		9E1779C07B349C028B254B9E /* Pods_CLRouter_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E0DA3963523F9167C435D32 /* Pods_CLRouter_Example.framework */; };
 /* End PBXBuildFile section */
@@ -93,6 +95,9 @@
 		757E8B9121FEECCC00F3A666 /* CLStaticStoryboardVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLStaticStoryboardVC.m; sourceTree = "<group>"; };
 		757E8B9321FEECDF00F3A666 /* StaticVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StaticVC.storyboard; sourceTree = "<group>"; };
 		757E8B9521FFDAFF00F3A666 /* router_table_smart_tourism.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = router_table_smart_tourism.json; sourceTree = "<group>"; };
+		7582C79B220198CA008E334B /* CLStaticBaseVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLStaticBaseVC.h; sourceTree = "<group>"; };
+		7582C79C220198CA008E334B /* CLStaticBaseVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLStaticBaseVC.m; sourceTree = "<group>"; };
+		7582C79E22019AEB008E334B /* router_table_smart_tourism.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = router_table_smart_tourism.plist; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9E0DA3963523F9167C435D32 /* Pods_CLRouter_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CLRouter_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C569191E12F08F7982D0A382 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
@@ -192,6 +197,8 @@
 		6003F594195388D20070C39A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				757E8B9521FFDAFF00F3A666 /* router_table_smart_tourism.json */,
+				7582C79E22019AEB008E334B /* router_table_smart_tourism.plist */,
 				6003F595195388D20070C39A /* CLRouter-Info.plist */,
 				6003F596195388D20070C39A /* InfoPlist.strings */,
 				6003F599195388D20070C39A /* main.m */,
@@ -249,7 +256,6 @@
 		757E8B7221FE917D00F3A666 /* Static */ = {
 			isa = PBXGroup;
 			children = (
-				757E8B9521FFDAFF00F3A666 /* router_table_smart_tourism.json */,
 				757E8B7A21FE936500F3A666 /* CLStaticClassVC.h */,
 				757E8B7B21FE936500F3A666 /* CLStaticClassVC.m */,
 				757E8B8B21FEECB000F3A666 /* CLStaticXibVC.h */,
@@ -258,6 +264,8 @@
 				757E8B9021FEECCC00F3A666 /* CLStaticStoryboardVC.h */,
 				757E8B9121FEECCC00F3A666 /* CLStaticStoryboardVC.m */,
 				757E8B9321FEECDF00F3A666 /* StaticVC.storyboard */,
+				7582C79B220198CA008E334B /* CLStaticBaseVC.h */,
+				7582C79C220198CA008E334B /* CLStaticBaseVC.m */,
 			);
 			name = Static;
 			sourceTree = "<group>";
@@ -313,6 +321,9 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = zhangchenglong;
 				TargetAttributes = {
+					6003F589195388D20070C39A = {
+						DevelopmentTeam = 2MQ5CEMXLL;
+					};
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
 					};
@@ -348,6 +359,7 @@
 				757E8B9421FEECDF00F3A666 /* StaticVC.storyboard in Resources */,
 				71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */,
 				757E8B9621FFDAFF00F3A666 /* router_table_smart_tourism.json in Resources */,
+				7582C79F22019AEB008E334B /* router_table_smart_tourism.plist in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
 				757E8B8F21FEECB000F3A666 /* CLStaticXibVC.xib in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
@@ -432,6 +444,7 @@
 				757E8B8821FEB0F600F3A666 /* CLDynamicStoryboardVC.m in Sources */,
 				757E8B7C21FE936500F3A666 /* CLStaticClassVC.m in Sources */,
 				757E8B8421FEB0DA00F3A666 /* CLDynamicXibVC.m in Sources */,
+				7582C79D220198CA008E334B /* CLStaticBaseVC.m in Sources */,
 				757E8B9221FEECCC00F3A666 /* CLStaticStoryboardVC.m in Sources */,
 				757E8B7921FE927200F3A666 /* CLDynamicClassVC.m in Sources */,
 				757E8B7621FE91B200F3A666 /* CLDynamicBaseVC.m in Sources */,
@@ -565,6 +578,7 @@
 			baseConfigurationReference = EAE904710FA24BEBCC8493BF /* Pods-CLRouter_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 2MQ5CEMXLL;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CLRouter/CLRouter-Prefix.pch";
 				INFOPLIST_FILE = "CLRouter/CLRouter-Info.plist";
@@ -580,6 +594,7 @@
 			baseConfigurationReference = 357E2567B03E20DEB21527B8 /* Pods-CLRouter_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 2MQ5CEMXLL;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CLRouter/CLRouter-Prefix.pch";
 				INFOPLIST_FILE = "CLRouter/CLRouter-Info.plist";
