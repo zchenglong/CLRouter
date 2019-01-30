@@ -22,20 +22,20 @@
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
-		757E8B7621FE91B200F3A666 /* CLDynamicBaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 757E8B7521FE91B200F3A666 /* CLDynamicBaseVC.m */; };
-		757E8B7921FE927200F3A666 /* CLDynamicClassVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 757E8B7821FE927200F3A666 /* CLDynamicClassVC.m */; };
-		757E8B7C21FE936500F3A666 /* CLStaticClassVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 757E8B7B21FE936500F3A666 /* CLStaticClassVC.m */; };
-		757E8B8421FEB0DA00F3A666 /* CLDynamicXibVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 757E8B8221FEB0DA00F3A666 /* CLDynamicXibVC.m */; };
-		757E8B8521FEB0DA00F3A666 /* CLDynamicXibVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 757E8B8321FEB0DA00F3A666 /* CLDynamicXibVC.xib */; };
-		757E8B8821FEB0F600F3A666 /* CLDynamicStoryboardVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 757E8B8721FEB0F600F3A666 /* CLDynamicStoryboardVC.m */; };
-		757E8B8A21FEB3D000F3A666 /* DynamicVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 757E8B8921FEB3D000F3A666 /* DynamicVC.storyboard */; };
-		757E8B8E21FEECB000F3A666 /* CLStaticXibVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 757E8B8C21FEECB000F3A666 /* CLStaticXibVC.m */; };
-		757E8B8F21FEECB000F3A666 /* CLStaticXibVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 757E8B8D21FEECB000F3A666 /* CLStaticXibVC.xib */; };
-		757E8B9221FEECCC00F3A666 /* CLStaticStoryboardVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 757E8B9121FEECCC00F3A666 /* CLStaticStoryboardVC.m */; };
-		757E8B9421FEECDF00F3A666 /* StaticVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 757E8B9321FEECDF00F3A666 /* StaticVC.storyboard */; };
 		757E8B9621FFDAFF00F3A666 /* router_table_smart_tourism.json in Resources */ = {isa = PBXBuildFile; fileRef = 757E8B9521FFDAFF00F3A666 /* router_table_smart_tourism.json */; };
-		7582C79D220198CA008E334B /* CLStaticBaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7582C79C220198CA008E334B /* CLStaticBaseVC.m */; };
 		7582C79F22019AEB008E334B /* router_table_smart_tourism.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7582C79E22019AEB008E334B /* router_table_smart_tourism.plist */; };
+		7582C7BA2201A92A008E334B /* CLStaticXibVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7582C7A52201A92A008E334B /* CLStaticXibVC.xib */; };
+		7582C7BB2201A92A008E334B /* CLStaticBaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7582C7A72201A92A008E334B /* CLStaticBaseVC.m */; };
+		7582C7BC2201A92A008E334B /* CLStaticXibVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7582C7A82201A92A008E334B /* CLStaticXibVC.m */; };
+		7582C7BD2201A92A008E334B /* CLStaticStoryboardVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7582C7AA2201A92A008E334B /* CLStaticStoryboardVC.m */; };
+		7582C7BE2201A92A008E334B /* StaticVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7582C7AD2201A92A008E334B /* StaticVC.storyboard */; };
+		7582C7BF2201A92A008E334B /* CLStaticClassVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7582C7AE2201A92A008E334B /* CLStaticClassVC.m */; };
+		7582C7C02201A92A008E334B /* CLDynamicClassVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7582C7B02201A92A008E334B /* CLDynamicClassVC.m */; };
+		7582C7C12201A92A008E334B /* CLDynamicStoryboardVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7582C7B22201A92A008E334B /* CLDynamicStoryboardVC.m */; };
+		7582C7C22201A92A008E334B /* CLDynamicBaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7582C7B32201A92A008E334B /* CLDynamicBaseVC.m */; };
+		7582C7C32201A92A008E334B /* DynamicVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7582C7B42201A92A008E334B /* DynamicVC.storyboard */; };
+		7582C7C42201A92A008E334B /* CLDynamicXibVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7582C7B52201A92A008E334B /* CLDynamicXibVC.m */; };
+		7582C7C52201A92A008E334B /* CLDynamicXibVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7582C7B82201A92A008E334B /* CLDynamicXibVC.xib */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
 		9E1779C07B349C028B254B9E /* Pods_CLRouter_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E0DA3963523F9167C435D32 /* Pods_CLRouter_Example.framework */; };
 /* End PBXBuildFile section */
@@ -76,28 +76,28 @@
 		641A1B26BEAF99C36E05AF7E /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		65EC84809C3658C4EC5D48DF /* Pods-CLRouter_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CLRouter_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CLRouter_Tests/Pods-CLRouter_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		757E8B7421FE91B200F3A666 /* CLDynamicBaseVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLDynamicBaseVC.h; sourceTree = "<group>"; };
-		757E8B7521FE91B200F3A666 /* CLDynamicBaseVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLDynamicBaseVC.m; sourceTree = "<group>"; };
-		757E8B7721FE927200F3A666 /* CLDynamicClassVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLDynamicClassVC.h; sourceTree = "<group>"; };
-		757E8B7821FE927200F3A666 /* CLDynamicClassVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLDynamicClassVC.m; sourceTree = "<group>"; };
-		757E8B7A21FE936500F3A666 /* CLStaticClassVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLStaticClassVC.h; sourceTree = "<group>"; };
-		757E8B7B21FE936500F3A666 /* CLStaticClassVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLStaticClassVC.m; sourceTree = "<group>"; };
-		757E8B8121FEB0DA00F3A666 /* CLDynamicXibVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLDynamicXibVC.h; sourceTree = "<group>"; };
-		757E8B8221FEB0DA00F3A666 /* CLDynamicXibVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLDynamicXibVC.m; sourceTree = "<group>"; };
-		757E8B8321FEB0DA00F3A666 /* CLDynamicXibVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CLDynamicXibVC.xib; sourceTree = "<group>"; };
-		757E8B8621FEB0F600F3A666 /* CLDynamicStoryboardVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLDynamicStoryboardVC.h; sourceTree = "<group>"; };
-		757E8B8721FEB0F600F3A666 /* CLDynamicStoryboardVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLDynamicStoryboardVC.m; sourceTree = "<group>"; };
-		757E8B8921FEB3D000F3A666 /* DynamicVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DynamicVC.storyboard; sourceTree = "<group>"; };
-		757E8B8B21FEECB000F3A666 /* CLStaticXibVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLStaticXibVC.h; sourceTree = "<group>"; };
-		757E8B8C21FEECB000F3A666 /* CLStaticXibVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLStaticXibVC.m; sourceTree = "<group>"; };
-		757E8B8D21FEECB000F3A666 /* CLStaticXibVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CLStaticXibVC.xib; sourceTree = "<group>"; };
-		757E8B9021FEECCC00F3A666 /* CLStaticStoryboardVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLStaticStoryboardVC.h; sourceTree = "<group>"; };
-		757E8B9121FEECCC00F3A666 /* CLStaticStoryboardVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLStaticStoryboardVC.m; sourceTree = "<group>"; };
-		757E8B9321FEECDF00F3A666 /* StaticVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StaticVC.storyboard; sourceTree = "<group>"; };
 		757E8B9521FFDAFF00F3A666 /* router_table_smart_tourism.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = router_table_smart_tourism.json; sourceTree = "<group>"; };
-		7582C79B220198CA008E334B /* CLStaticBaseVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLStaticBaseVC.h; sourceTree = "<group>"; };
-		7582C79C220198CA008E334B /* CLStaticBaseVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLStaticBaseVC.m; sourceTree = "<group>"; };
 		7582C79E22019AEB008E334B /* router_table_smart_tourism.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = router_table_smart_tourism.plist; sourceTree = "<group>"; };
+		7582C7A52201A92A008E334B /* CLStaticXibVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CLStaticXibVC.xib; sourceTree = "<group>"; };
+		7582C7A62201A92A008E334B /* CLStaticStoryboardVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLStaticStoryboardVC.h; sourceTree = "<group>"; };
+		7582C7A72201A92A008E334B /* CLStaticBaseVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLStaticBaseVC.m; sourceTree = "<group>"; };
+		7582C7A82201A92A008E334B /* CLStaticXibVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLStaticXibVC.m; sourceTree = "<group>"; };
+		7582C7A92201A92A008E334B /* CLStaticClassVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLStaticClassVC.h; sourceTree = "<group>"; };
+		7582C7AA2201A92A008E334B /* CLStaticStoryboardVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLStaticStoryboardVC.m; sourceTree = "<group>"; };
+		7582C7AB2201A92A008E334B /* CLStaticBaseVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLStaticBaseVC.h; sourceTree = "<group>"; };
+		7582C7AC2201A92A008E334B /* CLStaticXibVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLStaticXibVC.h; sourceTree = "<group>"; };
+		7582C7AD2201A92A008E334B /* StaticVC.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = StaticVC.storyboard; sourceTree = "<group>"; };
+		7582C7AE2201A92A008E334B /* CLStaticClassVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLStaticClassVC.m; sourceTree = "<group>"; };
+		7582C7B02201A92A008E334B /* CLDynamicClassVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLDynamicClassVC.m; sourceTree = "<group>"; };
+		7582C7B12201A92A008E334B /* CLDynamicXibVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLDynamicXibVC.h; sourceTree = "<group>"; };
+		7582C7B22201A92A008E334B /* CLDynamicStoryboardVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLDynamicStoryboardVC.m; sourceTree = "<group>"; };
+		7582C7B32201A92A008E334B /* CLDynamicBaseVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLDynamicBaseVC.m; sourceTree = "<group>"; };
+		7582C7B42201A92A008E334B /* DynamicVC.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DynamicVC.storyboard; sourceTree = "<group>"; };
+		7582C7B52201A92A008E334B /* CLDynamicXibVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLDynamicXibVC.m; sourceTree = "<group>"; };
+		7582C7B62201A92A008E334B /* CLDynamicClassVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLDynamicClassVC.h; sourceTree = "<group>"; };
+		7582C7B72201A92A008E334B /* CLDynamicStoryboardVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLDynamicStoryboardVC.h; sourceTree = "<group>"; };
+		7582C7B82201A92A008E334B /* CLDynamicXibVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CLDynamicXibVC.xib; sourceTree = "<group>"; };
+		7582C7B92201A92A008E334B /* CLDynamicBaseVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLDynamicBaseVC.h; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9E0DA3963523F9167C435D32 /* Pods_CLRouter_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CLRouter_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C569191E12F08F7982D0A382 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
@@ -179,8 +179,8 @@
 		6003F593195388D20070C39A /* Example for CLRouter */ = {
 			isa = PBXGroup;
 			children = (
-				757E8B7221FE917D00F3A666 /* Static */,
-				757E8B7121FE917100F3A666 /* Dynamic */,
+				7582C7AF2201A92A008E334B /* Dynamic */,
+				7582C7A42201A92A008E334B /* Static */,
 				6003F59C195388D20070C39A /* CLAppDelegate.h */,
 				6003F59D195388D20070C39A /* CLAppDelegate.m */,
 				6003F5A5195388D20070C39A /* CLViewController.h */,
@@ -236,38 +236,38 @@
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
-		757E8B7121FE917100F3A666 /* Dynamic */ = {
+		7582C7A42201A92A008E334B /* Static */ = {
 			isa = PBXGroup;
 			children = (
-				757E8B7421FE91B200F3A666 /* CLDynamicBaseVC.h */,
-				757E8B7521FE91B200F3A666 /* CLDynamicBaseVC.m */,
-				757E8B7721FE927200F3A666 /* CLDynamicClassVC.h */,
-				757E8B7821FE927200F3A666 /* CLDynamicClassVC.m */,
-				757E8B8121FEB0DA00F3A666 /* CLDynamicXibVC.h */,
-				757E8B8221FEB0DA00F3A666 /* CLDynamicXibVC.m */,
-				757E8B8321FEB0DA00F3A666 /* CLDynamicXibVC.xib */,
-				757E8B8621FEB0F600F3A666 /* CLDynamicStoryboardVC.h */,
-				757E8B8721FEB0F600F3A666 /* CLDynamicStoryboardVC.m */,
-				757E8B8921FEB3D000F3A666 /* DynamicVC.storyboard */,
+				7582C7A52201A92A008E334B /* CLStaticXibVC.xib */,
+				7582C7A62201A92A008E334B /* CLStaticStoryboardVC.h */,
+				7582C7A72201A92A008E334B /* CLStaticBaseVC.m */,
+				7582C7A82201A92A008E334B /* CLStaticXibVC.m */,
+				7582C7A92201A92A008E334B /* CLStaticClassVC.h */,
+				7582C7AA2201A92A008E334B /* CLStaticStoryboardVC.m */,
+				7582C7AB2201A92A008E334B /* CLStaticBaseVC.h */,
+				7582C7AC2201A92A008E334B /* CLStaticXibVC.h */,
+				7582C7AD2201A92A008E334B /* StaticVC.storyboard */,
+				7582C7AE2201A92A008E334B /* CLStaticClassVC.m */,
 			);
-			name = Dynamic;
+			path = Static;
 			sourceTree = "<group>";
 		};
-		757E8B7221FE917D00F3A666 /* Static */ = {
+		7582C7AF2201A92A008E334B /* Dynamic */ = {
 			isa = PBXGroup;
 			children = (
-				757E8B7A21FE936500F3A666 /* CLStaticClassVC.h */,
-				757E8B7B21FE936500F3A666 /* CLStaticClassVC.m */,
-				757E8B8B21FEECB000F3A666 /* CLStaticXibVC.h */,
-				757E8B8C21FEECB000F3A666 /* CLStaticXibVC.m */,
-				757E8B8D21FEECB000F3A666 /* CLStaticXibVC.xib */,
-				757E8B9021FEECCC00F3A666 /* CLStaticStoryboardVC.h */,
-				757E8B9121FEECCC00F3A666 /* CLStaticStoryboardVC.m */,
-				757E8B9321FEECDF00F3A666 /* StaticVC.storyboard */,
-				7582C79B220198CA008E334B /* CLStaticBaseVC.h */,
-				7582C79C220198CA008E334B /* CLStaticBaseVC.m */,
+				7582C7B02201A92A008E334B /* CLDynamicClassVC.m */,
+				7582C7B12201A92A008E334B /* CLDynamicXibVC.h */,
+				7582C7B22201A92A008E334B /* CLDynamicStoryboardVC.m */,
+				7582C7B32201A92A008E334B /* CLDynamicBaseVC.m */,
+				7582C7B42201A92A008E334B /* DynamicVC.storyboard */,
+				7582C7B52201A92A008E334B /* CLDynamicXibVC.m */,
+				7582C7B62201A92A008E334B /* CLDynamicClassVC.h */,
+				7582C7B72201A92A008E334B /* CLDynamicStoryboardVC.h */,
+				7582C7B82201A92A008E334B /* CLDynamicXibVC.xib */,
+				7582C7B92201A92A008E334B /* CLDynamicBaseVC.h */,
 			);
-			name = Static;
+			path = Dynamic;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -354,14 +354,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */,
-				757E8B8A21FEB3D000F3A666 /* DynamicVC.storyboard in Resources */,
-				757E8B8521FEB0DA00F3A666 /* CLDynamicXibVC.xib in Resources */,
-				757E8B9421FEECDF00F3A666 /* StaticVC.storyboard in Resources */,
+				7582C7C52201A92A008E334B /* CLDynamicXibVC.xib in Resources */,
+				7582C7C32201A92A008E334B /* DynamicVC.storyboard in Resources */,
 				71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */,
 				757E8B9621FFDAFF00F3A666 /* router_table_smart_tourism.json in Resources */,
+				7582C7BE2201A92A008E334B /* StaticVC.storyboard in Resources */,
 				7582C79F22019AEB008E334B /* router_table_smart_tourism.plist in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
-				757E8B8F21FEECB000F3A666 /* CLStaticXibVC.xib in Resources */,
+				7582C7BA2201A92A008E334B /* CLStaticXibVC.xib in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -440,17 +440,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				757E8B8E21FEECB000F3A666 /* CLStaticXibVC.m in Sources */,
-				757E8B8821FEB0F600F3A666 /* CLDynamicStoryboardVC.m in Sources */,
-				757E8B7C21FE936500F3A666 /* CLStaticClassVC.m in Sources */,
-				757E8B8421FEB0DA00F3A666 /* CLDynamicXibVC.m in Sources */,
-				7582C79D220198CA008E334B /* CLStaticBaseVC.m in Sources */,
-				757E8B9221FEECCC00F3A666 /* CLStaticStoryboardVC.m in Sources */,
-				757E8B7921FE927200F3A666 /* CLDynamicClassVC.m in Sources */,
-				757E8B7621FE91B200F3A666 /* CLDynamicBaseVC.m in Sources */,
+				7582C7C02201A92A008E334B /* CLDynamicClassVC.m in Sources */,
+				7582C7BF2201A92A008E334B /* CLStaticClassVC.m in Sources */,
+				7582C7C22201A92A008E334B /* CLDynamicBaseVC.m in Sources */,
 				6003F59E195388D20070C39A /* CLAppDelegate.m in Sources */,
+				7582C7BC2201A92A008E334B /* CLStaticXibVC.m in Sources */,
 				6003F5A7195388D20070C39A /* CLViewController.m in Sources */,
+				7582C7BB2201A92A008E334B /* CLStaticBaseVC.m in Sources */,
+				7582C7BD2201A92A008E334B /* CLStaticStoryboardVC.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
+				7582C7C42201A92A008E334B /* CLDynamicXibVC.m in Sources */,
+				7582C7C12201A92A008E334B /* CLDynamicStoryboardVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
