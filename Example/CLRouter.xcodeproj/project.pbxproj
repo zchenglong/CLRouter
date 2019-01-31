@@ -102,7 +102,7 @@
 		9E0DA3963523F9167C435D32 /* Pods_CLRouter_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CLRouter_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C569191E12F08F7982D0A382 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		EAE904710FA24BEBCC8493BF /* Pods-CLRouter_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CLRouter_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CLRouter_Example/Pods-CLRouter_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		FFAD044CE5CF81A8B35B84C3 /* CLRouter.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = CLRouter.podspec; path = ../CLRouter.podspec; sourceTree = "<group>"; };
+		FFAD044CE5CF81A8B35B84C3 /* CLRouter.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = CLRouter.podspec; path = ../CLRouter.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
