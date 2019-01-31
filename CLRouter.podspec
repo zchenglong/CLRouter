@@ -21,7 +21,7 @@ Pod::Spec.new do |s|
   iOS路由组件，可以跳转任意页面.
                        DESC
 
-  s.homepage         = 'https://github.com/zchenglong/CLRouter.git'
+  s.homepage         = 'https://github.com/zchenglong/CLRouter'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'zhangchenglong' => 'zchglong@163.com' }
