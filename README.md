@@ -22,7 +22,7 @@ pod 'CLRouter'
 
 ## Author
 
-zhangchenglong, zhangchenglong@evergrande.cn
+zhangchenglong, zchglong@163.com
 
 ## License
 
