@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "CLRouterTargetConfig.h"
 #import "CLRouterRequest.h"
+#import "CLRouterDefine.h"
 
 @interface CLRouterCore : NSObject
 
@@ -21,6 +22,6 @@
  @param sourceVC 源Controller，默认为nil，若为nil，使用当前viewController作为源
  @param callback 结果回调
  */
-+ (void)gotoViewControllerWithTargetConfig:(CLRouterTargetConfig *)targetConfig parameters:(NSDictionary *)parameters sourceVC:(UIViewController *)sourceVC callback:(void (^)(BOOL success))callback;
++ (void)gotoViewControllerWithTargetConfig:(CLRouterTargetConfig *)targetConfig parameters:(NSDictionary *)parameters sourceVC:(UIViewController *)sourceVC callback:(RouterActionCallback)callback;
 
 @end

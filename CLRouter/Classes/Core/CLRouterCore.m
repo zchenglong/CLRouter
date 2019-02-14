@@ -13,6 +13,7 @@
 #import "CLRouterTargetVCFactory.h"
 #import "UIViewController+CLRouter.h"
 #import "CLRouterRuntimeHelper.h"
+#import "NSError+CLRouter.h"
 
 @interface CLRouterCore ()
 
@@ -20,13 +21,13 @@
 
 @implementation CLRouterCore
 
-+ (void)gotoViewControllerWithTargetConfig:(CLRouterTargetConfig *)targetConfig parameters:(NSDictionary *)parameters sourceVC:(UIViewController *)sourceVC callback:(void (^)(BOOL success))callback {
++ (void)gotoViewControllerWithTargetConfig:(CLRouterTargetConfig *)targetConfig parameters:(NSDictionary *)parameters sourceVC:(UIViewController *)sourceVC callback:(RouterActionCallback)callback {
     
     //1.创建目标控制器
     UIViewController *targetVC = [CLRouterTargetVCFactory createTargetVCWithTargetConfig:targetConfig];
     if (!targetVC) {
         if (callback) {
-            callback(NO);
+            callback([NSError routerErrorWithCode:kRouterErrorCode_CreateVC]);
         }
         return;
     }
@@ -36,7 +37,7 @@
         //实现了协议的(动态注册)
         if (![self handleRouterDynamicProtocolWithParameters:parameters targetVC:targetVC]) {
             if (callback) {
-                callback(NO);
+                callback([NSError routerErrorWithCode:kRouterErrorCode_HandleParamDynamic]);
             }
             return;
         }
@@ -44,7 +45,7 @@
         //未实现协议的(静态注册)
         if (![self handleRouterStaticProtocolWithParameters:parameters targetVC:targetVC]) {
             if (callback) {
-                callback(NO);
+                callback([NSError routerErrorWithCode:kRouterErrorCode_HandleParamStatic]);
             }
             return;
         }
@@ -54,9 +55,25 @@
     if (!sourceVC || ![sourceVC isKindOfClass:[UIViewController class]]) {
         sourceVC = [self findCurrentViewController];
     }
+    if (!sourceVC) {
+        if (callback) {
+            callback([NSError routerErrorWithCode:kRouterErrorCode_FindSourceVC]);
+        }
+        return;
+    }
 
     //4.执行跳转
-    [self handleShowWithSourceVC:sourceVC targetVC:targetVC showType:targetConfig.showType];
+    if (![self handleShowWithSourceVC:sourceVC targetVC:targetVC showType:targetConfig.showType]) {
+        if (callback) {
+            callback([NSError routerErrorWithCode:kRouterErrorCode_HandleJump]);
+        }
+        return;
+    }
+    
+    //5.成功回调
+    if (callback) {
+        callback(nil);
+    }
 }
 
 

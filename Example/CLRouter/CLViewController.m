@@ -92,16 +92,16 @@
     CLTableItem *item = self.datas[indexPath.row];
     
     //方式一：使用CLRouterManager的open接口
-//    CLRouterRequest *routerRequest = [[CLRouterRequest alloc]init];
-//    routerRequest.url = [NSURL URLWithString:item.router];
-////    routerRequest.viewController = self;
-////    routerRequest.parameters = @{@"code":@9080};
-//    [[CLRouterManager sharedManager] openURLWithRouterRequest:routerRequest callback:^(NSURL *URL, BOOL success) {
-//        NSLog(@"%s | %d | %@",__func__, success, URL);
-//    }];
+    CLRouterURLRequest *routerRequest = [[CLRouterURLRequest alloc]init];
+    routerRequest.url = [NSURL URLWithString:item.router];
+    routerRequest.sourceVC = self;
+    routerRequest.parameters = @{@"code":@9080};
+    [[CLRouterManager sharedManager] openURLWithRouterRequest:routerRequest callback:^(NSURL *URL, NSError *error) {
+        NSLog(@"%s | %@ | %@",__func__, URL.absoluteString, error);
+    }];
 
     //方式二：利用系统的OpenURL，支持外部App打开对应页面(需要配置URLType)。
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:item.router]];
+//    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:item.router]];
 }
 
 @end

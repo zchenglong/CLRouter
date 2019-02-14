@@ -11,6 +11,7 @@
 #import "NSURL+CLRouter.h"
 #import "CLRouterCore.h"
 #import "CLRouterExternal.h"
+#import "NSError+CLRouter.h"
 
 @interface CLRouterManager ()
 
@@ -43,11 +44,11 @@
 
 #pragma mark - CLRouterManagerAccessProtocol
 
-- (void)openURLWithRouterRequest:(CLRouterRequest *)routerRequest callback:(void (^)(NSURL *URL, BOOL success))callback {
+- (void)openURLWithRouterRequest:(CLRouterURLRequest *)routerRequest callback:(RouterURLCallback)callback {
     NSURL *realURL = [self getRealURLWithRouterRequest:routerRequest];
     if (!realURL) {
         if (callback) {
-            callback(realURL, NO);
+            callback(realURL, [NSError routerErrorWithCode:kRouterErrorCode_URLParseError]);
         }
         return;
     }
@@ -55,26 +56,50 @@
     __weak typeof(self) weakSelf = self;
     [realURL router_parseURLWithCallback:^(NSString *scheme, NSString *host, NSDictionary *params) {
         __strong typeof(self) strongSelf = weakSelf;
-        CLRouterTargetConfig *targetModel = [[CLRouterTableManager sharedManager] getRouterTableTargetWithScheme:scheme host:host];
-        if (!targetModel) {
-            if (![[CLRouterTableManager sharedManager] isSchemeExist:scheme]) {
-                //external handler
-                [strongSelf handleExternalRouterWithURL:realURL callback:callback];
-            } else {
-                if (callback) {
-                    callback(realURL, NO);
-                }
-            }
+        
+        if (![[CLRouterTableManager sharedManager] isSchemeExist:scheme]) {
+            //external handler
+            [self handleExternalRouterWithURL:realURL callback:callback];
             return;
         }
-        //router core handler
-        [strongSelf handleRouterWithTarget:targetModel parameters:params routerRequest:routerRequest url:realURL callback:callback];
+        
+        NSMutableDictionary *dicParams = [NSMutableDictionary dictionary];
+        if (params) {
+            [dicParams setDictionary:params];
+        }
+        if (routerRequest.parameters) {
+            [routerRequest.parameters enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
+                if ([key isKindOfClass:[NSString class]]) {
+                    [dicParams setObject:obj forKey:key];
+                }
+            }];
+        }
+        CLRouterActionRequest *routerActionRequest = [[CLRouterActionRequest alloc]initWithScheme:scheme host:host
+                                                                                       parameters:dicParams];
+        [strongSelf actionWithRouterRequest:routerActionRequest callback:^(NSError *error) {
+            if (callback) {
+                callback(realURL, error);
+            }
+        }];
     }];
+}
+
+
+- (void)actionWithRouterRequest:(CLRouterActionRequest *)routerRequest callback:(RouterActionCallback)callback {
+    CLRouterTargetConfig *targetModel = [[CLRouterTableManager sharedManager] getRouterTableTargetWithScheme:routerRequest.scheme host:routerRequest.host];
+    if (!targetModel) {
+        if (callback) {
+            callback([NSError routerErrorWithCode:kRouterErrorCode_TargetNotFound]);
+        }
+        return;
+    }
+    //router core handler
+    [self handleRouterWithTarget:targetModel routerRequest:routerRequest callback:callback];
 }
 
 #pragma mark - PRIVATE METHOD
 
-- (NSURL *)getRealURLWithRouterRequest:(CLRouterRequest *)routerRequest {
+- (NSURL *)getRealURLWithRouterRequest:(CLRouterURLRequest *)routerRequest {
     if (routerRequest.url) {
         return routerRequest.url;
     }
@@ -84,29 +109,18 @@
     return nil;
 }
 
-- (void)handleExternalRouterWithURL:(NSURL *)url callback:(void (^)(NSURL *URL, BOOL success))callback {
+- (void)handleExternalRouterWithURL:(NSURL *)url callback:(RouterURLCallback)callback {
     [CLRouterExternal openOutSideURL:url callback:^(NSURL *URL, BOOL success) {
         if (callback) {
-            callback(URL, success);
+            callback(URL, success ? nil : [NSError routerErrorWithCode:kRouterErrorCode_OutsideOpenFailed]);
         }
     }];
 }
 
-- (void)handleRouterWithTarget:(CLRouterTargetConfig *)target parameters:(NSDictionary *)parameters routerRequest:(CLRouterRequest *)routerRequest url:(NSURL *)url callback:(void (^)(NSURL *URL, BOOL success))callback {
-    NSMutableDictionary *dicParams = [NSMutableDictionary dictionary];
-    if (parameters) {
-        [dicParams setDictionary:parameters];
-    }
-    if (routerRequest.parameters) {
-        [routerRequest.parameters enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
-            if ([key isKindOfClass:[NSString class]]) {
-                [dicParams setObject:obj forKey:key];
-            }
-        }];
-    }
-    [CLRouterCore gotoViewControllerWithTargetConfig:target parameters:dicParams sourceVC:routerRequest.sourceVC callback:^(BOOL success) {
+- (void)handleRouterWithTarget:(CLRouterTargetConfig *)target routerRequest:(CLRouterActionRequest *)routerRequest callback:(RouterActionCallback)callback {
+    [CLRouterCore gotoViewControllerWithTargetConfig:target parameters:routerRequest.parameters sourceVC:routerRequest.sourceVC callback:^(NSError *error) {
         if (callback) {
-            callback(url, success);
+            callback(error);
         }
     }];
 }
