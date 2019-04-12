@@ -43,7 +43,7 @@
         NSString *name = [NSString stringWithCString:cName encoding:NSUTF8StringEncoding];
         [mArray addObject:name];
     }
-    
+    free(properties);
     return mArray.copy;
 }
 

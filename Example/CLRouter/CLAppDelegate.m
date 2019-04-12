@@ -51,8 +51,7 @@
 }
 
 - (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options {
-    CLRouterURLRequest *routerRequest = [[CLRouterURLRequest alloc]init];
-    routerRequest.url = url;
+    CLRouterURLRequest *routerRequest = [[CLRouterURLRequest alloc]initWithURL:url];
     [[CLRouterManager sharedManager] openURLWithRouterRequest:routerRequest callback:^(NSURL *URL, NSError *error) {
         NSLog(@"%s | %@ | %@",__func__, URL, error);
     }];

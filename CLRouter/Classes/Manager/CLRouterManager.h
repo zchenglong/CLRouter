@@ -22,7 +22,7 @@
 - (void)openURLWithRouterRequest:(CLRouterURLRequest *)routerRequest callback:(RouterURLCallback)callback;
 
 /**
- 请求路由跳转
+ 请求路由跳转（Action）
 
  @param routerRequest 请求体，包含scheme、host
  @param callback 结果回调

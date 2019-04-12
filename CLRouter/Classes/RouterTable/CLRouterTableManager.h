@@ -15,16 +15,6 @@
 + (instancetype)sharedManager;
 
 /**
- 添加路由表目标项配置
- 
- @param scheme 路由协议名称，对应URL中的scheme
- @param host 路由目标项名称，对应URL中的host
- @param targetConfig 路由目标项配置
- @return 是否添加成功
- */
-- (BOOL)addRouterTableTargetWithScheme:(NSString *)scheme host:(NSString *)host targetConfig:(CLRouterTargetConfig *)targetConfig;
-
-/**
  获取路由表目标项配置
 
  @param scheme 路由表名称
