@@ -10,7 +10,8 @@
 #import "CLRouterRuntimeHelper.h"
 #import "CLRouterProtocol.h"
 #import "CLRouterFileHelper.h"
-#import "YYKit.h"
+#import "YYModel.h"
+//#import "NSObject+YYModel.h"
 
 
 @interface CLRouterTableManager ()
@@ -98,7 +99,7 @@
         NSString *scheme = key;
         [routerTable enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
             NSString *host = key;
-            CLRouterTargetConfig *targetConfig = [CLRouterTargetConfig modelWithDictionary:obj];
+            CLRouterTargetConfig *targetConfig = [CLRouterTargetConfig yy_modelWithDictionary:obj];
             [self addRouterTableTargetWithScheme:scheme host:host targetConfig:targetConfig];
         }];
     }];
@@ -111,7 +112,7 @@
     }
     [parameters enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
         NSString *host = key;
-        CLRouterTargetConfig *targetConfig = [CLRouterTargetConfig modelWithDictionary:obj];
+        CLRouterTargetConfig *targetConfig = [CLRouterTargetConfig yy_modelWithDictionary:obj];
         [self addRouterTableTargetWithScheme:scheme host:host targetConfig:targetConfig];
     }];
     return YES;
