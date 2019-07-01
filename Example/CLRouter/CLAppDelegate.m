@@ -17,9 +17,9 @@
     //动态注册路由表
     [[CLRouterManager sharedManager] registerRouterTableDynamic];
     //静态注册路由表
-    [[CLRouterManager sharedManager] registerRouterTableWithFilePath:@"router_table_smart_tourism.json" bundle:nil];
+    [[CLRouterManager sharedManager] registerRouterTableWithFilePath:@"router_table_smart_tourism.json" bundle:[NSBundle mainBundle]];
     //或者使用plist
-//    [[CLRouterManager sharedManager] registerRouterTableWithFilePath:@"router_table_smart_tourism.plist" bundle:nil];
+//    [[CLRouterManager sharedManager] registerRouterTableWithFilePath:@"router_table_smart_tourism.plist" bundle:[NSBundle mainBundle]];
     return YES;
 }
 

@@ -10,7 +10,7 @@
 #import "CLRouterRuntimeHelper.h"
 #import "CLRouterProtocol.h"
 #import "CLRouterFileHelper.h"
-#import "YYModel.h"
+//#import "YYModel.h"
 //#import "NSObject+YYModel.h"
 
 
@@ -98,8 +98,19 @@
         NSDictionary *routerTable = obj;
         NSString *scheme = key;
         [routerTable enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
+            if (!obj || ![obj isKindOfClass:[NSDictionary class]]) {
+                return;
+            }
             NSString *host = key;
-            CLRouterTargetConfig *targetConfig = [CLRouterTargetConfig yy_modelWithDictionary:obj];
+            NSDictionary *dicTagretConfig = obj;
+            CLRouterTargetConfig *targetConfig = [[CLRouterTargetConfig alloc]init];
+            targetConfig.showType = ((NSNumber *)dicTagretConfig[@"showType"]).integerValue;
+            targetConfig.vcType = ((NSNumber *)dicTagretConfig[@"vcType"]).integerValue;
+            targetConfig.className = dicTagretConfig[@"className"] ?: @"";
+            targetConfig.fileName = dicTagretConfig[@"fileName"] ?: @"";
+            targetConfig.identifier = dicTagretConfig[@"identifier"] ?: @"";
+            targetConfig.bundlePath = dicTagretConfig[@"bundlePath"] ?: @"";
+            
             [self addRouterTableTargetWithScheme:scheme host:host targetConfig:targetConfig];
         }];
     }];
@@ -111,8 +122,11 @@
         return NO;
     }
     [parameters enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
+        if (!obj || ![obj isKindOfClass:[CLRouterTargetConfig class]]) {
+            return;
+        }
         NSString *host = key;
-        CLRouterTargetConfig *targetConfig = [CLRouterTargetConfig yy_modelWithDictionary:obj];
+        CLRouterTargetConfig *targetConfig = obj;
         [self addRouterTableTargetWithScheme:scheme host:host targetConfig:targetConfig];
     }];
     return YES;
