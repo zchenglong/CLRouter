@@ -7,7 +7,7 @@
 //
 
 #import "CLViewController.h"
-#import "CLRouterManager.h"
+#import <CLRouter/CLRouterManager.h>
 
 @interface CLTableItem : NSObject
 

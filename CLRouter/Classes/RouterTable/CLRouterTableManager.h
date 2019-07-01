@@ -7,8 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "CLRouterTargetConfig.h"
-#import "CLRouterTableAccessProtocol.h"
+#import "CLRouterAccessProtocol.h"
 
 @interface CLRouterTableManager : NSObject <CLRouterTableAccessProtocol>
 
